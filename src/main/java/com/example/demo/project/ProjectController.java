@@ -2,7 +2,8 @@ package com.example.demo.project;
 
 import java.util.List;
 
-import com.example.demo.project.Release.Status;
+import com.example.demo.project.ProjectReleases.Release;
+import com.example.demo.project.ProjectReleases.Release.Status;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
