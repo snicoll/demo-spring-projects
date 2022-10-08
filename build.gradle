@@ -1,0 +1,23 @@
+plugins {
+	id 'org.graalvm.buildtools.native' version '0.9.27' apply false
+	id 'org.springframework.boot' version '3.1.4' apply false
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+
+subprojects {
+	repositories {
+		mavenCentral()
+	}
+
+	plugins.withType(JavaPlugin) {
+		sourceCompatibility = '17'
+
+		tasks.named('test') {
+			useJUnitPlatform()
+		}
+
+	}
+}
